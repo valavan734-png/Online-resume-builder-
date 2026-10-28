@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Online Resume Builder</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f2f5fb;color:#222}
+header{background:#2457d6;color:white;padding:24px 16px;text-align:center}header h1{margin:0 0 7px;font-size:27px}header p{margin:0}
+main{max-width:680px;margin:24px auto;padding:0 14px}.card{background:white;padding:22px;border-radius:12px;box-shadow:0 3px 14px #0000000d}
+h2{margin:0 0 14px;font-size:20px;color:#2457d6}
+label{display:block;font-weight:bold;font-size:14px;margin:13px 0 5px}
+input,textarea{width:100%;padding:11px;border:1px solid #ccd3df;border-radius:7px;font:inherit}
+textarea{min-height:78px;resize:vertical}
+button{border:0;border-radius:7px;padding:12px 15px;background:#2457d6;color:white;font-weight:bold;cursor:pointer;margin-top:16px;width:100%;font-size:15px}
+.secondary{background:#667085}
+.note{font-size:13px;color:#667085;line-height:1.5}
+@media(max-width:500px){.card{padding:16px}header h1{font-size:23px}}
+</style>
+</head>
+<body>
+<header><h1>Online Resume Builder</h1><p>Enter your details to prepare your resume information</p></header>
+<main>
+<section class="card">
+<h2>Student Details</h2>
+<form id="resumeForm">
+<label for="name">Full Name</label><input id="name" required placeholder="Enter your full name">
+<label for="role">Career Title</label><input id="role" placeholder="e.g. College Student">
+<label for="phone">Phone Number</label><input id="phone" type="tel" placeholder="Enter phone number">
+<label for="email">Email Address</label><input id="email" type="email" placeholder="Enter email address">
+<label for="address">Address / City</label><input id="address" placeholder="Enter your city">
+<label for="education">Education</label><textarea id="education" placeholder="Degree, college, year, marks"></textarea>
+<label for="skills">Skills</label><textarea id="skills" placeholder="HTML, CSS, communication..."></textarea>
+<label for="projects">Projects</label><textarea id="projects" placeholder="Project name and short description"></textarea>
+<label for="certs">Certifications</label><textarea id="certs" placeholder="Certificate name and organization"></textarea>
+<label for="summary">About Me / Career Objective</label><textarea id="summary" placeholder="Write a short introduction"></textarea>
+<button type="button" id="printBtn">Print / Save as PDF</button>
+<button type="reset" class="secondary">Clear Form</button>
+<p class="note">This simple version does not show a resume preview. Use Print / Save as PDF to print this page or save the entered information as a PDF.</p>
+</form>
+</section>
+</main>
+<script>
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+</script>
+</body>
+</html>
